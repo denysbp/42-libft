@@ -23,6 +23,8 @@ SRC = \
 	$(SRCS)ft_strrchr.c\
 	$(SRCS)ft_memchr.c\
 	$(SRCS)ft_memcmp.c\
+	$(SRCS)ft_calloc.c\
+	$(SRCS)ft_strdup.c\
 
 
 
