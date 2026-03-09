@@ -121,4 +121,35 @@ int main()
 	} else {
 		printf("%s is equal to %s\n", myStr1, myStr2);
 	}
+
+	printf("\n");
+	// Allocate memory for a number of items
+	int numItems = 0;
+	int *myArray = ft_calloc(numItems, sizeof(int));
+
+	// Write into the memory
+	for(int i = 0; i < numItems; i++) {
+		myArray[i] = i + 1;
+	}
+
+	// Display the contents of the memory
+	for(int i = 0; i < numItems; i++) {
+		printf("%d ", myArray[i]);
+	}
+
+	// Free the memory
+	free(myArray);
+	myArray = NULL;
+
+	printf("\n");
+	char *original = "banana";
+	char *copy;
+
+	copy = ft_strdup(original);
+
+	printf("Original: %s\n", original);
+	printf("Copia: %s\n", copy);
+
+	free(copy);
+	return (0);
 }

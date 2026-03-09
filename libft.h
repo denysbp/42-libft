@@ -30,5 +30,7 @@ char	*ft_strnstr(const char *str, const char *src, size_t size);
 char	*ft_strrchr(const char *str, int chr);
 void	*ft_memchr(const void *str, int chr, size_t size);
 int		ft_memcmp(const void *s1, const void *s2, size_t size);
+void	*ft_calloc(size_t nmemb, size_t size);
+char	*ft_strdup(char *src);
 
 #endif
