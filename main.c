@@ -20,7 +20,7 @@ int main()
 	printf("ft_isprint -> o resultado esperado é 0 e retorna == %d\n",ft_isprint('\n'));
 
 	char *d = "ola mundo";
-	printf("ft_strlen -> o resultado eperado é 9 = %d\n",ft_strlen(d));
+	printf("ft_strlen -> o resultado eperado é 9 = %zu\n",ft_strlen(d));
 
 	char *de = "ola mundo";
 	char c = 'o';
@@ -52,7 +52,7 @@ int main()
 	}
 	printf("\n");
 
-	printf("ft_strncmp -> é esperado 1 e retorna = %d\n",ft_strncmp("ola mundo", "ola mundo",5));
+	printf("ft_strncmp -> é esperado 0 e retorna = %d\n",ft_strncmp("ola mundo", "ola mundo",5));
 
 	printf("\n");
 	printf("ft_atoi -> return = %d\n",ft_atoi("  --4"));
@@ -68,4 +68,57 @@ int main()
 	printf("ft_memset -> return antes = %s\n",rt);
 	ft_memset(rt,'c',2);
 	printf("ft_memset -> return depois = %s\n",rt);
+
+	printf("\n");
+	char dest_str[] = "Tutorialspoint";
+	const char src_str[]  = "Denys";
+	printf("Before memmove dest = %s, src = %s\n", dest_str, src_str);
+	ft_memmove(dest_str, src_str, sizeof(src_str));
+	printf("After memmove dest = %s, src = %s\n", dest_str, src_str);
+
+	printf("\n");
+	char desti_str[6];
+	const char srrc_str[]  = "Denys";
+	printf("Before ft_strlcpy dest = %s, src = %s\n", desti_str, srrc_str);
+	size_t r = ft_strlcpy(desti_str, srrc_str, 6);
+	printf("After ft_strlcpy dest = %s, src = %s e o size foi %zu\n", desti_str, srrc_str,r);
+
+	printf("\n");
+	char destii_str[] = "denys ";
+	const char srrrc_str[]  = "mundo";
+	printf("Before ft_strlcat dest = %s, src = %s\n", destii_str, srrrc_str);
+	size_t rr = ft_strlcat(destii_str, srrrc_str,0);
+	printf("After ft_strlcat dest = %s, src = %s e o size foi %zu\n", destii_str, srrrc_str,rr);
+
+	printf("\n");
+	char s1[] = "Banana";
+	char s2[] = "ana";
+	printf("ft_strnstr -> %s\n",ft_strnstr(s1,s2,5));
+
+	printf("\n");
+	char str[] = "This is a sample string";
+	char * pch;
+	pch=ft_strrchr(str,'n');
+	printf ("ft_strrchr -> Last occurence of 's' found at %ld \n",pch-str+1);
+
+	printf("\n");
+	char myStr[] = "Hello World!";
+	char *myPtr = (char*)ft_memchr(myStr, 'e', 12);
+	if (myPtr != NULL) {
+	printf("%s", myPtr);
+	}
+
+	printf("\n");
+	char myStr1[] = "BBCD";
+	char myStr2[] = "BBCE";
+	int cmp = ft_memcmp(myStr1, myStr2, 5);
+
+	printf("\n");
+	if (cmp > 0) {
+		printf("%s is greater than %s\n", myStr1, myStr2);
+	} else if (cmp < 0) {
+		printf("%s is greater than %s\n", myStr2, myStr1);
+	} else {
+		printf("%s is equal to %s\n", myStr1, myStr2);
+	}
 }
