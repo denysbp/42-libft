@@ -87,7 +87,7 @@ int main()
 	char destii_str[] = "denys ";
 	const char srrrc_str[]  = "mundo";
 	printf("Before ft_strlcat dest = %s, src = %s\n", destii_str, srrrc_str);
-	size_t rr = ft_strlcat(destii_str, srrrc_str,0);
+	size_t rr = ft_strlcat(destii_str, srrrc_str,sizeof(srrrc_str));
 	printf("After ft_strlcat dest = %s, src = %s e o size foi %zu\n", destii_str, srrrc_str,rr);
 
 	printf("\n");
@@ -151,5 +151,18 @@ int main()
 	printf("Copia: %s\n", copy);
 
 	free(copy);
-	return (0);
+
+	printf("\n");
+
+	char cara[] = "denys";
+	char *car;
+	car = ft_substr(cara,2,sizeof(cara));
+	printf("ft_substr -> %s\n",car);
+
+	printf("\n");
+	char s1f[] = "Hello ";
+	char s2f[] = "word";
+	char *s3;
+	s3 = ft_strjoin(s1f,s2f);
+	printf("ft_strjoin -> %s\n",s3);
 }
