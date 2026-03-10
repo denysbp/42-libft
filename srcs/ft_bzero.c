@@ -3,7 +3,7 @@
 void	ft_bzero(void *str, size_t n)
 {
 	int				i;
-	unsigned char *st;
+	unsigned char	*st;
 
 	i = 0;
 	st = (unsigned char *)str;

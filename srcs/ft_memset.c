@@ -7,7 +7,7 @@ it into the first count characters of the object pointed to by dest.*/
 
 void	ft_memset(void *dest, int ch, size_t count)
 {
-	unsigned char *ps;
+	unsigned char	*ps;
 	int				i;
 
 	ps = (unsigned char *)dest;

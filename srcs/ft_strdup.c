@@ -9,6 +9,6 @@ char	*ft_strdup(char *src)
 		return (NULL);
 	}
 	dup = (char *)malloc(ft_strlen(src) + 1);
-	ft_strlcpy(dup,src,sizeof(src));
+	ft_strlcpy(dup, src, sizeof(src));
 	return (dup);
 }

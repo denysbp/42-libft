@@ -2,10 +2,9 @@
 
 char	*ft_strrchr(const char *str, int chr)
 {
-	size_t 			ch;
+	size_t			ch;
 	unsigned char	carater;
 	char			*cpy;
-
 
 	ch = ft_strlen(str);
 	cpy = (char *)str + ch;

@@ -1,6 +1,6 @@
 #include "libft.h"
 
-int		ft_strncmp(const char *str, const char *st, size_t count)
+int	ft_strncmp(const char *str, const char *st, size_t count)
 {
 	int	i;
 
