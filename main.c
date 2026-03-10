@@ -165,4 +165,9 @@ int main()
 	char *s3;
 	s3 = ft_strjoin(s1f,s2f);
 	printf("ft_strjoin -> %s\n",s3);
+
+	printf("\n");
+	char sd[] = "*--+**banana---";
+	char set[] = "*-+***";
+	printf("ft_strtrim -> %s\n",ft_strtrim(sd, set));
 }

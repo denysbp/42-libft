@@ -17,7 +17,7 @@ int			ft_toupper(int c);
 int			ft_tolower(int c);
 
 /* strings*/
-char		*ft_strchr(char *str, int ch);
+char		*ft_strchr(const char *str, int ch);
 void		*ft_memcpy(void *dest, const void *src, size_t count);
 int			ft_strncmp(const char *str, const char *st, size_t count);
 int			ft_atoi(const char *str);
@@ -36,5 +36,6 @@ char		*ft_strdup(char *src);
 /*part II*/
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
+char		*ft_strtrim(char const *s1, char const *set);
 
 #endif
