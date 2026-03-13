@@ -1,5 +1,20 @@
 #include "libft.h"
 
+
+char test_func(unsigned int i, char c)
+{
+	return c + i;
+}
+
+void test_func2(unsigned int i, char *c)
+{
+	if (*c >= 'a' && *c <= 'z')
+		*c = *c - 32;
+	if (i)
+	{
+		return;
+	}
+}
 int main()
 {
 	printf("ft_isalnum -> o resultado esperado é 1 e retorna == %d\n",ft_isalnum('h'));
@@ -142,6 +157,7 @@ int main()
 	myArray = NULL;
 
 	printf("\n");
+	printf("ft_strdup\n");
 	char *original = "banana";
 	char *copy;
 
@@ -170,4 +186,60 @@ int main()
 	char sd[] = "*--+**banana---";
 	char set[] = "*-+***";
 	printf("ft_strtrim -> %s\n",ft_strtrim(sd, set));
+
+	printf("\n");
+	printf("ft_split\n");
+	char dss[] = "banana-denys-ana";
+	char **dn;
+	dn = ft_split(dss,'-');
+	printf("%s\n", dn[0]);
+	printf("%s\n", dn[1]);
+	printf("%s\n", dn[2]);
+
+	printf("\n");
+	char	*numero = ft_itoa(-42);
+	printf("ft_itoa -> %s \n",numero);
+
+	printf("\n");
+	printf("ft_strmapi\n");
+	char *str1 = "aaaaa";
+	char *result;
+
+	result = ft_strmapi(str1, test_func);
+
+	if (result == NULL)
+	{
+		printf("Erro de malloc\n");
+		return (1);
+	}
+
+	printf("Original: %s\n", str1);
+	printf("Result: %s\n", result);
+
+	free(result);
+
+	printf("\n");
+	printf("ft_striteri\n");
+	char str3[] = "aaaaa";
+
+	printf("antes: %s\n",str3);
+	ft_striteri(str3, test_func2);
+	printf("Result: %s\n", str3);
+
+	printf("\n");
+	printf("ft_putchar_fd\n");
+	ft_putchar_fd('d',2);
+	printf("\n");
+
+	printf("\n");
+	printf("ft_putstr_fd\n");
+	ft_putstr_fd("Denys Bonfim\n",1);
+
+	printf("\n");
+	printf("ft_putendl_fd\n");
+	ft_putendl_fd("Denys Bonfim",1);
+
+	printf("\n");
+	printf("ft_putnbr_fd\n");
+	ft_putnbr_fd(42,1);
 }

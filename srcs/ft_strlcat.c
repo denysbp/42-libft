@@ -32,5 +32,5 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 		len_dest++;
 	}
 	dest[len_dest] = '\0';
-	return (len_src);
+	return (len_src + len_dest);
 }
