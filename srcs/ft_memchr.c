@@ -14,6 +14,7 @@ void	*ft_memchr(const void *str, int chr, size_t size)
 			return ((char *)carater);
 		}
 		carater++;
+		size--;
 	}
 	return (NULL);
 }

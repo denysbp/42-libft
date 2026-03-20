@@ -2,23 +2,30 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t Bytes)
 {
-	int				i;
-	unsigned char	*ps;
+	const unsigned char	*ps;
 	unsigned char	*pd;
 
 	pd = (unsigned char *)dest;
-	ps = (unsigned char *)src;
-	i = 0;
-	if (Bytes == 0)
+	ps = (const unsigned char *)src;
+	if (pd == ps || Bytes == 0)
 	{
 		return (dest);
 	}
-	while (Bytes != 0)
+	if (pd < ps)
 	{
-		pd[i] = ps[i];
-		i++;
-		Bytes--;
+		while (Bytes--)
+		{
+			*pd++ = *ps++;
+		}
 	}
-	pd[i] = '\0';
+	else
+	{
+		pd += Bytes;
+		ps += Bytes;
+		while (Bytes--)
+		{
+			*--pd = *--ps;
+		}
+	}
 	return (dest);
 }

@@ -11,15 +11,15 @@ char	*ft_strchr(const char *str, int ch)
 	i = 0;
 	while (str[i])
 	{
-		if (str[i] == ch)
+		if (str[i] == (char)ch)
 		{
-			return ((char *)str);
+			return ((char *)&str[i]);
 		}
 		i++;
 	}
 	if (ch == '\0')
 	{
-		return ((char *)str);
+		return ((char *)&str[i]);
 	}
 	return (NULL);
 }

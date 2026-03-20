@@ -9,7 +9,7 @@ int	ft_strncmp(const char *str, const char *st, size_t count)
 	{
 		return (0);
 	}
-	while ((str[i] == st[i] && str[i] != '\n' && st[i] != '\n') || count == 0)
+	while ((str[i] == st[i] && str[i] != '\0' && st[i] != '\0') || count == 0)
 	{
 		i++;
 		count--;

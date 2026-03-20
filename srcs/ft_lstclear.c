@@ -8,6 +8,10 @@ Finally, set the pointer to the list to NULL.
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*next_one;
+	if (!lst || !del)
+	{
+		return ;
+	}
 	while (*lst)
 	{
 		next_one = (*lst) -> next;

@@ -14,9 +14,9 @@ int	char_strlen(char *str)
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	size_t	i;
-	size_t	len_src;
-	int		len_dest;
+	size_t		i;
+	size_t		len_src;
+	size_t		len_dest;
 
 	len_dest = char_strlen(dest);
 	i = 0;
@@ -32,5 +32,12 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 		len_dest++;
 	}
 	dest[len_dest] = '\0';
-	return (len_src + len_dest);
+	if (len_dest < size)
+	{
+		return (len_src + len_dest);/*Tamanho ideal da string final*/
+	}
+	else
+	{
+		return (size + len_src);/*dest não cabe no buffer retorno indica truncamento*/
+	}
 }

@@ -2,29 +2,26 @@
 
 char	*ft_strnstr(const char *str, const char *src, size_t size)
 {
-	size_t	len_src;
 	size_t	i;
 	size_t	j;
 
 	i = 0;
-	len_src = ft_strlen(src);
-	if (len_src == 0 || str == src)
+	if (*src == '\0')
 	{
 		return ((char *)str);
 	}
-	while (str[i] != '\0' && i < size)
+	while (str[i] && i < size)
 	{
 		j = 0;
-		while (str[i + j] != '\0' && src[j] != '\0'
-			&& (i + j) < size && str[j + i] == src[j])
+		while ((i + j) < size && str[i + j] ==  src[j])
 		{
-			j++;
-			if ((j == size && j == len_src) || j == len_src)
+			if (src[j + 1] == '\0')
 			{
-				return ((char *)(str + i));
+				return (char *)(str + i);
 			}
+			j++;
 		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
