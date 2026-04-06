@@ -1,15 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: deferrei <deferrei@student.42lisboa.com    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/06 23:15:44 by deferrei          #+#    #+#             */
+/*   Updated: 2026/04/06 23:15:45 by deferrei         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int	char_strlen(char *str)
+size_t	ft_return(size_t size, size_t len_src, size_t len_dest)
 {
-	int	i;
-
-	i = 0;
-	while (str[i])
+	if (len_dest < size)
 	{
-		i++;
+		return (len_src + len_dest);
 	}
-	return (i);
+	else
+	{
+		return (size + len_src);
+	}
 }
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
@@ -18,26 +30,18 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t		len_src;
 	size_t		len_dest;
 
-	len_dest = char_strlen(dest);
+	len_dest = ft_strlen(dest);
 	i = 0;
 	len_src = ft_strlen(src);
-	if (size == 0)
+	if (size <= len_dest)
 	{
-		return (len_src);
+		return (size + len_src);
 	}
-	while (src[i] != '\0' && i < (size - 1))
+	while (src[i] != '\0' && len_dest + i < (size - 1))
 	{
-		dest[len_dest] = src[i];
+		dest[len_dest + i] = src[i];
 		i++;
-		len_dest++;
 	}
-	dest[len_dest] = '\0';
-	if (len_dest < size)
-	{
-		return (len_src + len_dest);/*Tamanho ideal da string final*/
-	}
-	else
-	{
-		return (size + len_src);/*dest não cabe no buffer retorno indica truncamento*/
-	}
+	dest[len_dest + i] = '\0';
+	return (ft_return(size, len_src, len_dest));
 }
