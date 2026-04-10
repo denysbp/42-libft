@@ -6,7 +6,11 @@
 /*   By: deferrei <deferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 23:16:28 by deferrei          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2026/04/06 23:24:17 by deferrei         ###   ########.fr       */
+=======
+/*   Updated: 2026/04/10 16:30:37 by deferrei         ###   ########.fr       */
+>>>>>>> master
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +24,10 @@
 # include <stdint.h>
 
 /* verification */
+<<<<<<< HEAD
 size_t		ft_strlen(const char *str);
+=======
+>>>>>>> master
 int			ft_isalpha(int c);
 int			ft_isdigit(int c);
 int			ft_isalnum(int c);
@@ -30,6 +37,10 @@ int			ft_toupper(int c);
 int			ft_tolower(int c);
 
 /* strings*/
+<<<<<<< HEAD
+=======
+size_t		ft_strlen(const char *str);
+>>>>>>> master
 char		*ft_strchr(const char *str, int ch);
 void		*ft_memcpy(void *dest, const void *src, size_t count);
 int			ft_strncmp(const char *str, const char *st, size_t count);
@@ -43,6 +54,7 @@ char		*ft_strnstr(const char *str, const char *src, size_t size);
 char		*ft_strrchr(const char *str, int chr);
 void		*ft_memchr(const void *str, int chr, size_t size);
 int			ft_memcmp(const void *s1, const void *s2, size_t size);
+<<<<<<< HEAD
 void		*ft_calloc(size_t nmemb, size_t size);
 char		*ft_strdup(const char *src);
 
@@ -54,16 +66,39 @@ char		**ft_split(char const *s, char c);
 char		*ft_itoa(int n);
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void		ft_striteri(char *s, void (*f)(unsigned int, char*));
+=======
+void		*ft_calloc(size_t space, size_t size);
+char		*ft_strdup(const char *src);
+
+/*part II*/
+char		*ft_substr(char const *str, unsigned int start, size_t len);
+char		*ft_strjoin(char const *s1, char const *s2);
+char		*ft_strtrim(char const *s1, char const *set);
+char		**ft_split(char const *str, char c);
+char		*ft_itoa(int n);
+char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+void		ft_striteri(char *s, void (*f)(unsigned int, char*));
+
+/*part III*/
+>>>>>>> master
 void		ft_putchar_fd(char c, int fd);
 void		ft_putstr_fd(char *s, int fd);
 void		ft_putendl_fd(char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
 
+<<<<<<< HEAD
 /*part III*/
 typedef struct s_list
 {
 	void			*content;
 	struct s_listc	*next;
+=======
+/*part IV*/
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+>>>>>>> master
 }	t_list;
 
 t_list		*ft_lstnew(void *content);
