@@ -6,7 +6,7 @@
 /*   By: deferrei <deferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 23:16:28 by deferrei          #+#    #+#             */
-/*   Updated: 2026/04/10 23:44:24 by deferrei         ###   ########.fr       */
+/*   Updated: 2026/04/10 23:48:26 by deferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void		ft_putnbr_fd(int n, int fd);
 typedef struct s_list
 {
 	void			*content;
-	struct s_list	*next;
+	struct s_listc	*next;
 }	t_list;
 
 t_list		*ft_lstnew(void *content);
