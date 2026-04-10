@@ -6,11 +6,7 @@
 /*   By: deferrei <deferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 23:14:38 by deferrei          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2026/04/06 23:20:15 by deferrei         ###   ########.fr       */
-=======
-/*   Updated: 2026/04/10 16:57:57 by deferrei         ###   ########.fr       */
->>>>>>> master
+/*   Updated: 2026/04/10 23:50:12 by deferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +24,7 @@
 	A new copy of the list if no function was provided.
 	NULL if the memory allocation failed.*/
 
-<<<<<<< HEAD
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
-=======
-t_list	*  ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
->>>>>>> master
 {
 	t_list	*new_list;
 	t_list	*node;

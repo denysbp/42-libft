@@ -301,4 +301,4 @@ lst: pointer address to the first element of the list.
 <pre><code>t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 </code></pre>
 <p style="font-size:16px; font-family:Arial, sans-serif;">Iterate over the list 'lst' and apply the function 'f' to the content of each elements. Create a new list resulting of the successive applications of 'f'. The function 'del' is used to destroy the content of an element if necessary.
-<hr>
+<

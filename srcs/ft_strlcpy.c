@@ -6,11 +6,7 @@
 /*   By: deferrei <deferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 23:15:50 by deferrei          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2026/04/06 23:15:51 by deferrei         ###   ########.fr       */
-=======
-/*   Updated: 2026/04/08 13:29:21 by deferrei         ###   ########.fr       */
->>>>>>> master
+/*   Updated: 2026/04/10 23:49:07 by deferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +23,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	{
 		return (src_len);
 	}
-<<<<<<< HEAD
 	while (i < (size - 1) && src[i] != '\0')
-=======
-	while (i < (size - 1) && src[i])
->>>>>>> master
 	{
 		dest[i] = src[i];
 		i++;

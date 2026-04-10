@@ -6,11 +6,7 @@
 /*   By: deferrei <deferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 23:15:44 by deferrei          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2026/04/06 23:15:45 by deferrei         ###   ########.fr       */
-=======
-/*   Updated: 2026/04/08 13:31:25 by deferrei         ###   ########.fr       */
->>>>>>> master
+/*   Updated: 2026/04/10 23:49:28 by deferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,11 +37,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	{
 		return (size + len_src);
 	}
-<<<<<<< HEAD
-	while (src[i] != '\0' && len_dest + i < (size - 1))
-=======
 	while (src[i] && len_dest + i < (size - 1))
->>>>>>> master
 	{
 		dest[len_dest + i] = src[i];
 		i++;
