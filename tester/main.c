@@ -119,7 +119,7 @@ int main()
 
     printf("ft_strlen:\t");
     const char *test_strings[] = {
-        "denys Bonfim","IA MAl programda","42 Lisboa","STRLen",
+        "denys Bonfim","IA MAl programada","42 Lisboa","STRLen",
         "Hello, World!","", "1234567890","     ","Special chars !@#$%^&*()",
         "New\nLine","Tab\tCharacter","VeryLongStringVeryLongStringVeryLongStringVeryLongString",
         "ÁÉÍÓÚ àèìòù","中文字符","🙂 Emoji test 🙂","Mix123ABC!@#",
@@ -157,7 +157,7 @@ int main()
     print_result(ft_strlcpy(desti_str, srrc_str, sizeof(desti_str)) == strlcpy(desti_str, srrc_str, sizeof(desti_str)));
 
     printf("ft_strlcat: \t"); char destii_str[20] = "denys "; const char srrrc_str[]  = "mundo";
-    print_result(ft_strlcat(destii_str, srrrc_str, sizeof(destii_str)) == strlcat(destii_str, srrrc_str, sizeof(destii_str)));
+    print_result(ft_strlcat(destii_str, srrrc_str, ft_strlen(destii_str) + 1) == strlcat(destii_str, srrrc_str, ft_strlen(destii_str) + 1));
 
     printf("ft_itoa: \t");
     char *num = ft_itoa(-42);
