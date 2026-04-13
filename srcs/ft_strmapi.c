@@ -6,7 +6,7 @@
 /*   By: deferrei <deferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 23:15:58 by deferrei          #+#    #+#             */
-/*   Updated: 2026/04/06 23:15:59 by deferrei         ###   ########.fr       */
+/*   Updated: 2026/04/12 18:57:53 by deferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*copia;
-	int		i;
+	char			*copia;
+	unsigned int	i;
 
 	if (!s)
 	{

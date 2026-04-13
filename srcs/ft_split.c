@@ -6,7 +6,7 @@
 /*   By: deferrei <deferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 23:15:24 by deferrei          #+#    #+#             */
-/*   Updated: 2026/04/10 23:48:04 by deferrei         ###   ########.fr       */
+/*   Updated: 2026/04/11 21:54:44 by deferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static int	fill_array(char **array, const char *s, char c, int words)
 		start = i;
 		while (s[i] && s[i] != c)
 			i++;
-		array[end] = get_word(s, start, i);
+		array[end] = get_word(s, start, i - start);
 		if (!array[end])
 			return (free_all(array, end - 1), 0);
 		end++;
