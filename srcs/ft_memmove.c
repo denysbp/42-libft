@@ -6,7 +6,7 @@
 /*   By: deferrei <deferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 23:15:02 by deferrei          #+#    #+#             */
-/*   Updated: 2026/04/10 23:49:51 by deferrei         ###   ########.fr       */
+/*   Updated: 2026/04/14 16:16:54 by deferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,3 +39,12 @@ void	*ft_memmove(void *dest, const void *src, size_t Bytes)
 	}
 	return (dest);
 }
+
+/* int main()
+{
+	char idk[] = "denysr";
+	char Idk[] = "bonfim";
+
+	ft_memmove(idk, Idk, 6);
+	printf("%s", idk);
+} */

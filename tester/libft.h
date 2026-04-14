@@ -6,7 +6,7 @@
 /*   By: deferrei <deferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 23:16:28 by deferrei          #+#    #+#             */
-/*   Updated: 2026/04/13 11:31:37 by deferrei         ###   ########.fr       */
+/*   Updated: 2026/04/14 15:00:02 by deferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdio.h>
 # include <stddef.h>
 # include <stdint.h>
+# include <string.h>
 
 /* verification */
 size_t		ft_strlen(const char *str);

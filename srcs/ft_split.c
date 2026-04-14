@@ -6,7 +6,7 @@
 /*   By: deferrei <deferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 23:15:24 by deferrei          #+#    #+#             */
-/*   Updated: 2026/04/11 21:54:44 by deferrei         ###   ########.fr       */
+/*   Updated: 2026/04/14 11:49:47 by deferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,6 @@ static void	free_all(char **array, int n)
 	free(array);
 }
 
-static char	*get_word(const char *s, int start, int end)
-{
-	return (ft_substr(s, start, end - start));
-}
-
 static int	fill_array(char **array, const char *s, char c, int words)
 {
 	int	i;
@@ -58,7 +53,7 @@ static int	fill_array(char **array, const char *s, char c, int words)
 		start = i;
 		while (s[i] && s[i] != c)
 			i++;
-		array[end] = get_word(s, start, i - start);
+		array[end] = ft_substr(s, start, i - start);
 		if (!array[end])
 			return (free_all(array, end - 1), 0);
 		end++;
@@ -82,3 +77,12 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	return (array);
 }
+
+/*
+int main()
+{
+	char **str;
+
+	str = ft_split("Denys ferreira Bonfim",' ');
+	printf("%s",str[2]);
+}*/

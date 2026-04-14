@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <bsd/string.h>
 
 #define RED "\033[31m"
 #define GREEN "\033[32m"
@@ -234,10 +235,21 @@ int main()
     print_result(1);
 
     printf("=== Testando ft_lstmap ===\n");
-    t_list *mapped = ft_lstmap(head, map_func, del_func);
-    print_result(mapped && strcmp(mapped->content, "A!") == 0 && strcmp(mapped->next->content, "B!") == 0);
+    t_list *lista;
+    lista = malloc(sizeof(t_list));
+    lista ->content = ft_strdup("A");
+    lista -> next = NULL;
+
+    // list com 2 nos
+    lista ->next = malloc(sizeof(t_list));
+    lista ->next->content = ft_strdup("B");
+    lista ->next->next = NULL;
+
+    t_list *mapped = ft_lstmap(lista, map_func, del_func);
+    print_result(mapped &&  mapped->next && strcmp(mapped -> content, "A!") == 0 && strcmp(mapped->next->content, "B!") == 0);
 
     ft_lstclear(&head, del_func);
+    ft_lstclear(&lista, del_func);
     ft_lstclear(&mapped, del_func);
 
     printf("\nTodos os testes concluídos!\n");

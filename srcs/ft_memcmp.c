@@ -6,7 +6,7 @@
 /*   By: deferrei <deferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 23:14:52 by deferrei          #+#    #+#             */
-/*   Updated: 2026/04/06 23:14:53 by deferrei         ###   ########.fr       */
+/*   Updated: 2026/04/14 15:49:54 by deferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,13 @@ int	ft_memcmp(const void *s1, const void *s2, size_t size)
 		}
 		i++;
 	}
-	return (0);
+	return (p1[i] - p2[i]);
 }
+
+// int main()
+// {
+// 	int array[] = {1,4,4};
+// 	int array_1[] = {1,2,4};
+
+// 	printf("%d", ft_memcmp(array_1, array, 12));
+// }

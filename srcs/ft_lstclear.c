@@ -6,7 +6,7 @@
 /*   By: deferrei <deferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 23:14:17 by deferrei          #+#    #+#             */
-/*   Updated: 2026/04/06 23:26:24 by deferrei         ###   ########.fr       */
+/*   Updated: 2026/04/14 14:33:14 by deferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,17 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	}
 	*lst = NULL;
 }
+
+/* void del_func(void *content)
+{
+    free(content);
+}
+int main()
+{
+	t_list	*head = NULL;
+	t_list *nova = ft_lstnew(ft_strdup("IM SCARED\n"));
+	t_list	*nv = ft_lstnew(ft_strdup("IM NOT A ZEN ANYMORE"));
+    ft_lstadd_front(&head, nova);
+	ft_lstadd_back(&head, nv);
+	ft_lstclear(&nova, del_func);
+} */

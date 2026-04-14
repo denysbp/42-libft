@@ -6,7 +6,7 @@
 /*   By: deferrei <deferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 23:13:40 by deferrei          #+#    #+#             */
-/*   Updated: 2026/04/10 23:50:47 by deferrei         ###   ########.fr       */
+/*   Updated: 2026/04/14 12:36:42 by deferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,29 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	}
 	total = nmemb * size;
 	pbr = malloc(total);
-	if (pbr == NULL)
+	if (!pbr)
 	{
 		return (NULL);
 	}
 	ft_memset(pbr, 0, total);
 	return (pbr);
 }
+
+/*int main()
+{
+	int numItems = 15;
+	int *myArray = calloc(numItems, sizeof(int));
+
+	for(int i = 0; i < numItems; i++) {
+		myArray[i] = i + 1;
+	}
+
+	for(int i = 0; i < numItems; i++) {
+		printf("%d ", myArray[i]);
+	}
+
+	free(myArray);
+	myArray = NULL;
+
+	return 0;
+}*/

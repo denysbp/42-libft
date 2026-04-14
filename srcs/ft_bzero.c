@@ -6,7 +6,7 @@
 /*   By: deferrei <deferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 23:13:35 by deferrei          #+#    #+#             */
-/*   Updated: 2026/04/06 23:13:36 by deferrei         ###   ########.fr       */
+/*   Updated: 2026/04/14 12:20:31 by deferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,14 @@ void	ft_bzero(void *str, size_t n)
 		i++;
 	}
 }
+
+/*int main()
+{
+	char str[10];
+
+	ft_bzero(str, 10);
+	str[0] = 'd';
+	str[1] = 'e';
+	str[4] = 'n';
+	printf("%s",str);
+}*/

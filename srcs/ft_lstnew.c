@@ -6,7 +6,7 @@
 /*   By: deferrei <deferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 23:14:41 by deferrei          #+#    #+#             */
-/*   Updated: 2026/04/06 23:14:42 by deferrei         ###   ########.fr       */
+/*   Updated: 2026/04/14 13:44:23 by deferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,3 +25,10 @@ t_list	*ft_lstnew(void *content)
 	new_list -> next = NULL;
 	return (new_list);
 }
+
+/* int main()
+{
+	t_list *nova = ft_lstnew(ft_strdup("IM SCARED"));
+	
+	printf("%s", (char *)nova ->content);
+} */

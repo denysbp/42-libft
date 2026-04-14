@@ -6,7 +6,7 @@
 /*   By: deferrei <deferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 23:14:38 by deferrei          #+#    #+#             */
-/*   Updated: 2026/04/10 23:50:12 by deferrei         ###   ########.fr       */
+/*   Updated: 2026/04/14 15:08:00 by deferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_list;
 	t_list	*node;
 
-	if (! lst)
-		return (NULL);
+	new_list = NULL;
 	while (lst)
 	{
-		if (! f)
-			node = ft_lstnew(lst -> content);
-		else
-			node = ft_lstnew(f(lst -> content));
+		node = ft_lstnew(f(lst -> content));
 		if (! node)
 		{
 			ft_lstclear(&new_list, del);
@@ -47,3 +43,35 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (new_list);
 }
+
+/* void *map_func(void *content)
+{
+    char *str = (char *)content;
+    char *new = malloc(strlen(str) + 2);
+    if (!new) return NULL;
+    strcpy(new, str);
+    strcat(new, "!");
+    return new;
+}
+void del_func(void *content)
+{
+    free(content);
+}
+int main()
+{
+	t_list *lista;
+    lista = malloc(sizeof(t_list));
+    lista ->content = ft_strdup("A");
+    lista -> next = NULL;
+
+    // list com 2 nos
+    lista ->next = malloc(sizeof(t_list));
+    lista ->next->content = ft_strdup("B");
+    lista ->next->next = NULL;
+
+    t_list *mapped = ft_lstmap(lista, map_func, del_func);
+	printf("%s", (char *)mapped->next->content);
+	ft_lstclear(&lista, del_func);
+	ft_lstclear(&mapped, del_func);
+	
+} */

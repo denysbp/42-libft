@@ -6,7 +6,7 @@
 /*   By: deferrei <deferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 23:15:05 by deferrei          #+#    #+#             */
-/*   Updated: 2026/04/06 23:15:06 by deferrei         ###   ########.fr       */
+/*   Updated: 2026/04/14 16:22:10 by deferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,3 +35,11 @@ void	ft_memset(void *dest, int ch, size_t count)
 		i++;
 	}
 }
+
+/* int main()
+{
+	char array[] = "denys";
+
+	ft_memset(array, '0', 6);
+	printf("%s", array);
+} */

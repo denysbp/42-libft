@@ -46,13 +46,12 @@ SRC = \
 	$(SRCS)ft_lstiter.c\
 	$(SRCS)ft_lstmap.c\
 
-INCLUDES := includes/
 OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME): all
 .c.o:
-	cc $(CCFLAGS) -c -I$(INCLUDES) $< -o $(<:.c=.o)
+	cc $(CCFLAGS) -c  $< -o $(<:.c=.o)
 
 libft.a: $(OBJ)
 	ar rcs $(NAME) $(OBJ)

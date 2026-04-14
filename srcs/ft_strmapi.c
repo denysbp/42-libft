@@ -6,7 +6,7 @@
 /*   By: deferrei <deferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 23:15:58 by deferrei          #+#    #+#             */
-/*   Updated: 2026/04/12 18:57:53 by deferrei         ###   ########.fr       */
+/*   Updated: 2026/04/14 16:30:29 by deferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,15 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	copia[i] = '\0';
 	return (copia);
+}
+
+char test_func(unsigned int i, char c)
+{
+    return c + i;
+}
+int main()
+{
+	char *str1 = "aaaaa";
+    char *res = ft_strmapi(str1, test_func);
+	printf("%s", res);
 }
