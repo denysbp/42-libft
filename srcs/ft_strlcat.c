@@ -6,13 +6,13 @@
 /*   By: deferrei <deferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 23:15:44 by deferrei          #+#    #+#             */
-/*   Updated: 2026/04/10 23:49:28 by deferrei         ###   ########.fr       */
+/*   Updated: 2026/04/16 16:49:22 by deferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_return(size_t size, size_t len_src, size_t len_dest)
+static size_t	ft_return(size_t size, size_t len_src, size_t len_dest)
 {
 	if (len_dest < size)
 	{

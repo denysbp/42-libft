@@ -6,13 +6,13 @@
 /*   By: deferrei <deferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 23:14:06 by deferrei          #+#    #+#             */
-/*   Updated: 2026/04/16 16:37:58 by deferrei         ###   ########.fr       */
+/*   Updated: 2026/04/16 16:48:01 by deferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	get_digits(int n)
+static int	get_digits(int n)
 {
 	int	digits;
 	int	copia;
