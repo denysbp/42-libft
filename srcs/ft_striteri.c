@@ -6,7 +6,7 @@
 /*   By: deferrei <deferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 23:15:38 by deferrei          #+#    #+#             */
-/*   Updated: 2026/04/14 16:28:18 by deferrei         ###   ########.fr       */
+/*   Updated: 2026/04/14 20:10:10 by deferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	}
 }
 
-void test_func2(unsigned int i, char *c)
+/*void test_func2(unsigned int i, char *c)
 {
     if (*c >= 'a' && *c <= 'z')
         *c = *c - 32;
@@ -39,4 +39,4 @@ int main()
 	char str2[] = "aaaaa";
     ft_striteri(str2, test_func2);
 	printf("%s", str2);
-}
+}*/

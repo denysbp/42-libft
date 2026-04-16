@@ -49,11 +49,10 @@ SRC = \
 OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
-$(NAME): all
 .c.o:
 	cc $(CCFLAGS) -c  $< -o $(<:.c=.o)
 
-libft.a: $(OBJ)
+$(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ)
 
 clean:

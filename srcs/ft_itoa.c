@@ -6,7 +6,7 @@
 /*   By: deferrei <deferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 23:14:06 by deferrei          #+#    #+#             */
-/*   Updated: 2026/04/14 13:17:26 by deferrei         ###   ########.fr       */
+/*   Updated: 2026/04/16 16:37:58 by deferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	get_digits(int n)
 	digits = 0;
 	if (copia <= 0)
 		digits++;
-	while(copia)
+	while (copia)
 	{
 		copia /= 10;
 		digits++;
@@ -37,7 +37,7 @@ char	*ft_itoa(int n)
 
 	digits = get_digits(n);
 	copia = n;
-	numero = malloc(sizeof(char) * digits);
+	numero = malloc(sizeof(char) * digits + 1);
 	if (! numero)
 		return (NULL);
 	numero[digits] = '\0';
@@ -48,7 +48,7 @@ char	*ft_itoa(int n)
 	}
 	if (copia == 0)
 		numero[0] = '0';
-	while(copia)
+	while (copia)
 	{
 		numero[--digits] = (copia % 10) + '0';
 		copia /= 10;

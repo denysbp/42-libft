@@ -6,7 +6,7 @@
 /*   By: deferrei <deferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 23:13:30 by deferrei          #+#    #+#             */
-/*   Updated: 2026/04/14 12:11:49 by deferrei         ###   ########.fr       */
+/*   Updated: 2026/04/14 20:05:38 by deferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,4 +47,3 @@ int main()
 	int resultado = ft_atoi("-123555-5");
 	printf("%d",resultado);
 }*/
-
