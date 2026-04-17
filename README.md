@@ -1,6 +1,4 @@
-<h1 style="text-align:center;">Libft</h1>
-
-<b style="text-align:justify; display:block;">This project has been created as part of the 42 curriculum by deferrei</b>
+<i style="text-align:justify; display:block;">This project has been created as part of the 42 curriculum by deferrei</i>
 
 <h2>Description</h2>
 
@@ -223,7 +221,7 @@ address to ’f’ so it can be modified if necessary.
 <pre><code>void ft_putnbr_fd(int n, int fd);
 
 </code></pre>
-<p style="font-size:16px; font-family:Arial, sans-serif;">This function will write  numbers  passed on <code>int n</code> on the <code>int fd</code> to the file descriptor:
+<p style="font-size:16px; font-family:Arial, sans-serif;">This functiAI was used to remind me of the HTML tags, and to draw me how the linked links were drawn in my memory.on will write  numbers  passed on <code>int n</code> on the <code>int fd</code> to the file descriptor:
 <ul>
 	<li> Standard Input (0, stdin)</li>
 	<li>Standard Output (1, stdout)</li>
@@ -300,5 +298,11 @@ lst: pointer address to the first element of the list.
 <h5 style>ft_lstmap:</h5>
 <pre><code>t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 </code></pre>
-<p style="font-size:16px; font-family:Arial, sans-serif;">Iterate over the list 'lst' and apply the function 'f' to the content of each elements. Create a new list resulting of the successive applications of 'f'. The function 'del' is used to destroy the content of an element if necessary.
-<
+<p style="font-size:16px; font-family:Arial, sans-serif;">Iterate over the list 'lst' and apply the function 'f' to the content of each elements. Create a new list resulting of the successive applications of 'f'. The function 'del' is used to destroy the content of an element if necessary.</p>
+
+<hr>
+<h2>Instructions</h2>
+
+<p>Be inside the folder containing the functions and the make file, and use make to generate the file containing the compiled library. This will generate libft.a, which you will use to compile along with your .c file.</p>
+<h2>Resources</h2>
+<p>AI was used to remind me of the HTML tags, and to draw me how the linked links were drawn in my memory.</p>
