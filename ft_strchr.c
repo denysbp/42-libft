@@ -6,7 +6,7 @@
 /*   By: deferrei <deferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 23:15:31 by deferrei          #+#    #+#             */
-/*   Updated: 2026/04/14 16:26:08 by deferrei         ###   ########.fr       */
+/*   Updated: 2026/04/17 22:42:32 by deferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strchr(const char *str, int ch)
 		}
 		i++;
 	}
-	if (ch == '\0')
+	if ((char)ch == '\0')
 	{
 		return ((char *)&str[i]);
 	}

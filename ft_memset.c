@@ -6,7 +6,7 @@
 /*   By: deferrei <deferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/06 23:15:05 by deferrei          #+#    #+#             */
-/*   Updated: 2026/04/14 16:22:10 by deferrei         ###   ########.fr       */
+/*   Updated: 2026/04/17 22:35:01 by deferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,23 +17,19 @@ dest, ch and count. The character represented by ch
 is first converted to unsigned char and then copies
 it into the first count characters of the object pointed to by dest.*/
 
-void	ft_memset(void *dest, int ch, size_t count)
+void	*ft_memset(void *dest, int ch, size_t count)
 {
 	unsigned char	*ps;
-	int				i;
+	size_t			i;
 
 	ps = (unsigned char *)dest;
 	i = 0;
-	if (count == 0)
+	while (i < count)
 	{
-		return ;
-	}
-	while (count != 0)
-	{
-		ps[i] = ch;
-		count--;
+		ps[i] = (unsigned char)ch;
 		i++;
 	}
+	return (dest);
 }
 
 /* int main()

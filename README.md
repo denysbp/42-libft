@@ -1,4 +1,4 @@
-<i style="text-align:justify; display:block;">This project has been created as part of the 42 curriculum by deferrei</i>
+<i style="text-align:justify; display:block;">This project has been created as part of the 42 curriculum by deferrei.</i>
 
 <h2>Description</h2>
 
@@ -131,12 +131,6 @@
 <p style="font-size:16px; font-family:Arial, sans-serif;"> This function allocates a amount of memory<code>size_t space</code> of a type of the data you wanna pass <code>size_t size</code> and fills it with 0 and return a pointer to it.</p>
 <hr>
 
-<h5>ft_memcmp:</h5>
-<pre><code>int ft_memcmp(const void *s1, const void *s2, size_t size);
-</code></pre>
-<p style="font-size:16px; font-family:Arial, sans-serif;"> This function will compare two<code>void *</code> pointer <code>s1</code> and <code>s2</code> until <code>size_t size</code> bytes of a block of memory.Them will return 0 if they are equals a positive number if <code>s1</code> is bigger than  <code>s2</code> and a negative number if <code>s1</code> are smaller than <code>s2</code>.</p>
-<hr>
-
 <h5>ft_strdup:</h5>
 <pre><code>char *ft_strdup(const char *src);
 </code></pre>
@@ -150,7 +144,7 @@
 
 <h5>ft_strjoin:</h5>
 <pre><code>char *ft_strjoin(char const *s1, char const *s2);</code></pre>
-<p style="font-size:16px; font-family:Arial, sans-serif;"> This function will receive <code>const char *s1</code> and <code>const char *s2</code> will create a new string, it will literally join the both string in new one, and will return the pointer to new string.
+<p style="font-size:16px; font-family:Arial, sans-serif;"> This function will receive <code>const char *s1</code> and <code>const char *s2</code> will create a new string, it will literally join the both string in new one, and will return the pointer to new string.</p>
 <hr>
 
 <h5>ft_split:</h5>
